@@ -1,17 +1,7 @@
 #!/usr/bin/bash
 export XEE_PATH=`dirname "$(realpath $0)"`
 export XEE_EXTERNALS=$XEE_PATH/externals
-
-if [ "$1" == "2024" ]; then
-    export XEE_RELEASE="CMSSW_15_0_2";
-elif [ "$1" == "2023" ]; then
-    export XEE_RELEASE="CMSSW_13_0_13"
-elif [ "$1" == "2022" ]; then
-    export XEE_RELEASE="CMSSW_13_0_13"
-else
-    echo "ERA $1 not implemented"
-    exit 1;
-fi
+export XEE_RELEASE="CMSSW_15_0_13";
 
 #cmsrel
 scramv1 project $XEE_RELEASE
